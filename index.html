@@ -1,181 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2028 Candidate Match Quiz</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 700px;
-            margin: auto;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .question {
-            margin-bottom: 20px;
-        }
-        .answers label {
-            display: block;
-            margin: 5px 0;
-        }
-        #result {
-            margin-top: 30px;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        button {
-            padding: 10px 15px;
-            font-size: 1em;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>2028 Candidate Alignment Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 25px;
+      padding: 15px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .result {
+      padding: 20px;
+      background-color: #e0ffe0;
+      border: 2px solid #4caf50;
+      border-radius: 8px;
+      font-size: 1.2em;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .result img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0d47a1;
+    }
+  </style>
 </head>
 <body>
-
-<h1>Which 2028 Candidate Matches Your Politics?</h1>
-<form id="quizForm">
+  <h1>2028 Candidate Alignment Quiz</h1>
+  <form id="quizForm">
+    <!-- Questions go here -->
     <div class="question">
-        <p>1. A pregnant friend tells you they can’t travel for an abortion in their state. You think...</p>
-        <div class="answers">
-            <label><input type="radio" name="q1" value="A"> They should have access regardless of state laws.</label>
-            <label><input type="radio" name="q1" value="B"> There should be exceptions, but with limits.</label>
-            <label><input type="radio" name="q1" value="C"> States should protect unborn life.</label>
-            <label><input type="radio" name="q1" value="D"> Not sure / prefer not to say.</label>
-        </div>
+      <p>1. What is your view on abortion access?</p>
+      <label><input type="radio" name="q1" value="Kamala Harris"> Abortion should be legal in all cases.</label><br>
+      <label><input type="radio" name="q1" value="Pete Buttigieg"> Abortion should be legal with some limits.</label><br>
+      <label><input type="radio" name="q1" value="JD Vance"> Abortion should be restricted or banned.</label>
     </div>
 
-    <div class="question">
-        <p>2. You hear that Congress might ban AR-15 sales. Your reaction?</p>
-        <div class="answers">
-            <label><input type="radio" name="q2" value="A"> It’s about time.</label>
-            <label><input type="radio" name="q2" value="B"> It depends — safety matters, but so does freedom.</label>
-            <label><input type="radio" name="q2" value="C"> That’s a violation of constitutional rights.</label>
-            <label><input type="radio" name="q2" value="D"> Not sure.</label>
-        </div>
-    </div>
-
-    <div class="question">
-        <p>3. What should be the U.S. role in global conflicts such as Ukraine or Syria?</p>
-        <div class="answers">
-            <label><input type="radio" name="q3" value="A"> The U.S. should intervene if democracy is threatened.</label>
-            <label><input type="radio" name="q3" value="B"> We should act only if it directly benefits the U.S.</label>
-            <label><input type="radio" name="q3" value="C"> We should prioritize diplomacy and avoid military involvement.</label>
-            <label><input type="radio" name="q3" value="D"> Not sure.</label>
-        </div>
-    </div>
-
-    <div class="question">
-        <p>4. The economy is struggling; do you prefer...</p>
-        <div class="answers">
-            <label><input type="radio" name="q4" value="A"> Government intervention to boost growth.</label>
-            <label><input type="radio" name="q4" value="B"> Cutting taxes and regulation to allow the private sector to lead the recovery.</label>
-            <label><input type="radio" name="q4" value="C"> More focus on social programs to help those impacted.</label>
-            <label><input type="radio" name="q4" value="D"> Not sure.</label>
-        </div>
-    </div>
-
-    <div class="question">
-        <p>5. Do you support legalizing marijuana?</p>
-        <div class="answers">
-            <label><input type="radio" name="q5" value="A"> Yes, it should be fully legalized nationwide.</label>
-            <label><input type="radio" name="q5" value="B"> Only for medical use, and strictly regulated.</label>
-            <label><input type="radio" name="q5" value="C"> No, it should remain illegal.</label>
-            <label><input type="radio" name="q5" value="D"> Not sure.</label>
-        </div>
-    </div>
-
-    <div class="question">
-        <p>6. How do you feel about immigration reform?</p>
-        <div class="answers">
-            <label><input type="radio" name="q6" value="A"> We need a pathway to citizenship for undocumented immigrants.</label>
-            <label><input type="radio" name="q6" value="B"> We should focus on securing the border first, then work on reform.</label>
-            <label><input type="radio" name="q6" value="C"> Immigration laws should be stricter, with more penalties for illegal immigration.</label>
-            <label><input type="radio" name="q6" value="D"> Not sure.</label>
-        </div>
-    </div>
-
-    <div class="question">
-        <p>7. Should the minimum wage be increased?</p>
-        <div class="answers">
-            <label><input type="radio" name="q7" value="A"> Yes, it should be raised to help workers.</label>
-            <label><input type="radio" name="q7" value="B"> It should be raised in some areas but not universally.</label>
-            <label><input type="radio" name="q7" value="C"> No, the market should determine wages.</label>
-            <label><input type="radio" name="q7" value="D"> Not sure.</label>
-        </div>
-    </div>
-
-    <div class="question">
-        <p>8. Do you support universal healthcare?</p>
-        <div class="answers">
-            <label><input type="radio" name="q8" value="A"> Yes, healthcare should be a right for all.</label>
-            <label><input type="radio" name="q8" value="B"> It’s important, but we need to ensure it doesn’t increase taxes too much.</label>
-            <label><input type="radio" name="q8" value="C"> No, private healthcare is better.</label>
-            <label><input type="radio" name="q8" value="D"> Not sure.</label>
-        </div>
-    </div>
-
-    <div class="question">
-        <p>9. How do you view climate change?</p>
-        <div class="answers">
-            <label><input type="radio" name="q9" value="A"> It’s a major crisis, and we need to act now.</label>
-            <label><input type="radio" name="q9" value="B"> Climate change is real, but we need to balance it with economic needs.</label>
-            <label><input type="radio" name="q9" value="C"> It’s overhyped, and we shouldn’t act too quickly.</label>
-            <label><input type="radio" name="q9" value="D"> Not sure.</label>
-        </div>
-    </div>
-
-    <div class="question">
-        <p>10. How do you feel about the current U.S. political division?</p>
-        <div class="answers">
-            <label><input type="radio" name="q10" value="A"> We need to unify and work together for the common good.</label>
-            <label><input type="radio" name="q10" value="B"> There will always be division, but we can still work through it.</label>
-            <label><input type="radio" name="q10" value="C"> The political divide is too deep, and it's hard to see a way forward.</label>
-            <label><input type="radio" name="q10" value="D"> Not sure.</label>
-        </div>
-    </div>
+    <!-- Add remaining questions similarly -->
 
     <button type="button" onclick="calculateResult()">Submit</button>
-</form>
+  </form>
 
-<div id="result"></div>
+  <div id="result" class="result" style="display:none;"></div>
 
-<script>
-    const candidateMap = {
-        A: ["Newsom", "Harris", "Gallego"],
-        B: ["Buttigieg", "Beshear"],
-        C: ["Scott", "Haley", "Vance", "Rubio", "Trump Jr"],
-        D: []
+  <script>
+    const candidateImages = {
+      "JD Vance": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Senator_Vance_official_portrait._118th_Congress.jpg",
+      "Gavin Newsom": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Gavin_Newsom_official_photo.jpg",
+      "Tim Scott": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Tim_Scott%2C_official_portrait%2C_113th_Congress.jpg",
+      "Andy Beshear": "https://governor.ky.gov/PublishingImages/Pages/About/Governor%20Andy%20Beshear.jpg",
+      "Kamala Harris": "https://upload.wikimedia.org/wikipedia/commons/1/12/Kamala_Harris_Vice_Presidential_Portrait.jpg",
+      "Nikki Haley": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Nikki_Haley_official_photo.jpg",
+      "Pete Buttigieg": "https://upload.wikimedia.org/wikipedia/commons/3/32/Pete_Buttigieg_official_photo.jpg",
+      "Donald Trump Jr.": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Donald_Trump_Jr._2019.jpg",
+      "Ruben Gallego": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Senator_Ruben_Gallego_Official_Portrait.jpg",
+      "Marco Rubio": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Marco_Rubio_official_portrait.jpg"
     };
 
     function calculateResult() {
-        const form = document.forms["quizForm"];
-        let scores = {
-            "Newsom": 0,
-            "Harris": 0,
-            "Gallego": 0,
-            "Buttigieg": 0,
-            "Beshear": 0,
-            "Scott": 0,
-            "Haley": 0,
-            "Vance": 0,
-            "Rubio": 0,
-            "Trump Jr": 0
-        };
+      let scores = {
+        "JD Vance": 0,
+        "Gavin Newsom": 0,
+        "Tim Scott": 0,
+        "Andy Beshear": 0,
+        "Kamala Harris": 0,
+        "Nikki Haley": 0,
+        "Pete Buttigieg": 0,
+        "Donald Trump Jr.": 0,
+        "Ruben Gallego": 0,
+        "Marco Rubio": 0
+      };
 
-        for (let i = 1; i <= 10; i++) {
-            const answer = form[`q${i}`].value;
-            if (candidateMap[answer]) {
-                candidateMap[answer].forEach(name => scores[name] += 2);
-            }
+      const form = document.forms["quizForm"];
+      for (let i = 1; i <= 10; i++) {
+        const answer = form["q" + i].value;
+        if (answer && scores.hasOwnProperty(answer)) {
+          scores[answer]++;
         }
+      }
 
-        const topCandidate = Object.entries(scores).reduce((a, b) => b[1] > a[1] ? b : a);
-        document.getElementById("result").innerText = `You most closely align with: ${topCandidate[0]}`;
+      const winner = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+      const resultDiv = document.getElementById("result");
+      resultDiv.style.display = "block";
+      const imgSrc = candidateImages[winner] || "";
+      resultDiv.innerHTML = `
+        You most closely align with: <strong>${winner}</strong><br>
+        <img src="${imgSrc}" alt="${winner}'s photo">
+      `;
     }
-</script>
-
+  </script>
 </body>
 </html>
