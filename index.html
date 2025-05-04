@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2028 Candidate Match Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers label {
+            display: block;
+            margin: 5px 0;
+        }
+        #result {
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Which 2028 Candidate Matches Your Politics?</h1>
+<form id="quizForm">
+    <div class="question">
+        <p>1. A pregnant friend tells you they can’t travel for an abortion in their state. You think...</p>
+        <div class="answers">
+            <label><input type="radio" name="q1" value="A"> They should have access regardless of state laws.</label>
+            <label><input type="radio" name="q1" value="B"> There should be exceptions, but with limits.</label>
+            <label><input type="radio" name="q1" value="C"> States should protect unborn life.</label>
+            <label><input type="radio" name="q1" value="D"> Not sure / prefer not to say.</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>2. You hear that Congress might ban AR-15 sales. Your reaction?</p>
+        <div class="answers">
+            <label><input type="radio" name="q2" value="A"> It’s about time.</label>
+            <label><input type="radio" name="q2" value="B"> It depends — safety matters, but so does freedom.</label>
+            <label><input type="radio" name="q2" value="C"> That’s a violation of constitutional rights.</label>
+            <label><input type="radio" name="q2" value="D"> Not sure.</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>3. What should be the U.S. role in global conflicts such as Ukraine or Syria?</p>
+        <div class="answers">
+            <label><input type="radio" name="q3" value="A"> The U.S. should intervene if democracy is threatened.</label>
+            <label><input type="radio" name="q3" value="B"> We should act only if it directly benefits the U.S.</label>
+            <label><input type="radio" name="q3" value="C"> We should prioritize diplomacy and avoid military involvement.</label>
+            <label><input type="radio" name="q3" value="D"> Not sure.</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>4. The economy is struggling; do you prefer...</p>
+        <div class="answers">
+            <label><input type="radio" name="q4" value="A"> Government intervention to boost growth.</label>
+            <label><input type="radio" name="q4" value="B"> Cutting taxes and regulation to allow the private sector to lead the recovery.</label>
+            <label><input type="radio" name="q4" value="C"> More focus on social programs to help those impacted.</label>
+            <label><input type="radio" name="q4" value="D"> Not sure.</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>5. Do you support legalizing marijuana?</p>
+        <div class="answers">
+            <label><input type="radio" name="q5" value="A"> Yes, it should be fully legalized nationwide.</label>
+            <label><input type="radio" name="q5" value="B"> Only for medical use, and strictly regulated.</label>
+            <label><input type="radio" name="q5" value="C"> No, it should remain illegal.</label>
+            <label><input type="radio" name="q5" value="D"> Not sure.</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>6. How do you feel about immigration reform?</p>
+        <div class="answers">
+            <label><input type="radio" name="q6" value="A"> We need a pathway to citizenship for undocumented immigrants.</label>
+            <label><input type="radio" name="q6" value="B"> We should focus on securing the border first, then work on reform.</label>
+            <label><input type="radio" name="q6" value="C"> Immigration laws should be stricter, with more penalties for illegal immigration.</label>
+            <label><input type="radio" name="q6" value="D"> Not sure.</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>7. Should the minimum wage be increased?</p>
+        <div class="answers">
+            <label><input type="radio" name="q7" value="A"> Yes, it should be raised to help workers.</label>
+            <label><input type="radio" name="q7" value="B"> It should be raised in some areas but not universally.</label>
+            <label><input type="radio" name="q7" value="C"> No, the market should determine wages.</label>
+            <label><input type="radio" name="q7" value="D"> Not sure.</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>8. Do you support universal healthcare?</p>
+        <div class="answers">
+            <label><input type="radio" name="q8" value="A"> Yes, healthcare should be a right for all.</label>
+            <label><input type="radio" name="q8" value="B"> It’s important, but we need to ensure it doesn’t increase taxes too much.</label>
+            <label><input type="radio" name="q8" value="C"> No, private healthcare is better.</label>
+            <label><input type="radio" name="q8" value="D"> Not sure.</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>9. How do you view climate change?</p>
+        <div class="answers">
+            <label><input type="radio" name="q9" value="A"> It’s a major crisis, and we need to act now.</label>
+            <label><input type="radio" name="q9" value="B"> Climate change is real, but we need to balance it with economic needs.</label>
+            <label><input type="radio" name="q9" value="C"> It’s overhyped, and we shouldn’t act too quickly.</label>
+            <label><input type="radio" name="q9" value="D"> Not sure.</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>10. How do you feel about the current U.S. political division?</p>
+        <div class="answers">
+            <label><input type="radio" name="q10" value="A"> We need to unify and work together for the common good.</label>
+            <label><input type="radio" name="q10" value="B"> There will always be division, but we can still work through it.</label>
+            <label><input type="radio" name="q10" value="C"> The political divide is too deep, and it's hard to see a way forward.</label>
+            <label><input type="radio" name="q10" value="D"> Not sure.</label>
+        </div>
+    </div>
+
+    <button type="button" onclick="calculateResult()">Submit</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+    const candidateMap = {
+        A: ["Newsom", "Harris", "Gallego"],
+        B: ["Buttigieg", "Beshear"],
+        C: ["Scott", "Haley", "Vance", "Rubio", "Trump Jr"],
+        D: []
+    };
+
+    function calculateResult() {
+        const form = document.forms["quizForm"];
+        let scores = {
+            "Newsom": 0,
+            "Harris": 0,
+            "Gallego": 0,
+            "Buttigieg": 0,
+            "Beshear": 0,
+            "Scott": 0,
+            "Haley": 0,
+            "Vance": 0,
+            "Rubio": 0,
+            "Trump Jr": 0
+        };
+
+        for (let i = 1; i <= 10; i++) {
+            const answer = form[`q${i}`].value;
+            if (candidateMap[answer]) {
+                candidateMap[answer].forEach(name => scores[name] += 2);
+            }
+        }
+
+        const topCandidate = Object.entries(scores).reduce((a, b) => b[1] > a[1] ? b : a);
+        document.getElementById("result").innerText = `You most closely align with: ${topCandidate[0]}`;
+    }
+</script>
+
+</body>
+</html>
